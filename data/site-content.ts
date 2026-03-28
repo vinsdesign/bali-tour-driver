@@ -10,14 +10,14 @@ import {
 } from "lucide-react";
 
 export const siteConfig = {
-  name: "Made Surya",
+  name: "Nyoman Kelvin",
   role: "Private Driver & Bali Tour Guide",
   description:
     "Comfortable, safe, and punctual service for airport transfer, Bali tours, and private trips across Bali.",
-  phoneDisplay: "+62 812-3456-7890",
-  whatsappNumber: "6281234567890",
+  phoneDisplay: "+62 8593 5148 300",
+  whatsappNumber: "6285935148300",
   location: "Bali, Indonesia",
-  experienceLabel: "8+ years experience",
+  experienceLabel: "30+ years experience",
 };
 
 export const heroStats = [

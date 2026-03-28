@@ -1,32 +1,21 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Made Surya | Private Driver & Bali Tour Guide",
   description:
     "Private driver and Bali tour guide service for airport transfer, Bali tours, and custom private trips with Toyota Innova Reborn.",
-  keywords: [
-    "Bali private driver",
-    "Bali tour guide",
-    "airport transfer Bali",
-    "Innova Reborn Bali driver",
-    "private driver Bali",
-  ],
-  openGraph: {
-    title: "Made Surya | Private Driver & Bali Tour Guide",
-    description:
-      "Comfortable and reliable private driver service in Bali for airport pickup, family trips, and tours.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Made Surya | Private Driver & Bali Tour Guide",
-    description: "Comfortable and reliable private driver service in Bali.",
-  },
 };
 
 export default function RootLayout({
@@ -35,8 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)}>
-      <body>{children}</body>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
